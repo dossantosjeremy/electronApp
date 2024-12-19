@@ -1,0 +1,32 @@
+{
+  "name": "video-transcription-and-annotation",
+  "version": "1.0.0",
+  "description": "An Electron app for video transcription, annotation, and clip creation",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-packager . --overwrite --platform=darwin,win32 --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=assets/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Video Transcription and Annotation\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icon.png --prune=true --out=release-builds"
+  },
+  "keywords": [
+    "electron",
+    "video",
+    "transcription",
+    "annotation",
+    "clips"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.0.0",
+    "electron-packager": "^15.2.0"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^4.4.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "ollama": "^0.5.9"
+  }
+}
